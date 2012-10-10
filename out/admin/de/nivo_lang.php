@@ -33,5 +33,8 @@ $aLang = array(
 	'SHOP_MODULE_sNivoTheme_nivo' => 'nivo',
 	'SHOP_MODULE_sNivoTheme_orman' => 'orman',
 	'SHOP_MODULE_sNivoTheme_pascal' => 'pascal',
+	'SHOP_MODULE_sNivoTheme_bar' => 'bar',
+	'SHOP_MODULE_sNivoTheme_dark' => 'dark',
+	'SHOP_MODULE_sNivoTheme_light' => 'light',
 	'SHOP_MODULE_sNivoWidth' => 'Slider Breite ( &quot;%&quot; oder &quot;px&quot; z.B. &quot;100%&quot; oder &quot;250px&quot;)',
 );

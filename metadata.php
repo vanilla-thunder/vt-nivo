@@ -35,7 +35,7 @@ $aModule = array(
         array('group' => 'nivoMain', 'name' => 'bNivoControlNavThumbs', 'type' => 'bool', 'value' => false, 'position' => 6),
         array('group' => 'nivoMain', 'name' => 'sNivoPrevText', 'type' => 'str', 'value' => 'Prev', 'position' => 7),
         array('group' => 'nivoMain', 'name' => 'sNivoNextText', 'type' => 'str', 'value' => 'Next', 'position' => 8),
-        array('group' => 'nivoStyle', 'name' => 'sNivoTheme', 'type' => 'select', 'value' => 'default', 'constrains' => 'default|nivo|orman|pascal'),
+        array('group' => 'nivoStyle', 'name' => 'sNivoTheme', 'type' => 'select', 'value' => 'default', 'constrains' => 'default|nivo|orman|pascal|bar|dark|light'),
         array('group' => 'nivoStyle', 'name' => 'sNivoWidth', 'type' => 'str', 'value' => '100%'),
     )
 );
