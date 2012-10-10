@@ -1,5 +1,5 @@
 <?php
-class start_ext extends start_ext_parent
+class start_nivo extends start_nivo_parent
 {	
 	public function getNivoSetting($sVar)
 	{

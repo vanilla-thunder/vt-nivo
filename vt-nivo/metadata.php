@@ -21,7 +21,7 @@ $aModule = array(
     'email' => 'oxid@marat-bedoev.net',
     'url' => 'https://github.com/vanilla-thunder/',
     'extend' => array(
-        'start' => 'vt-nivo/start_ext',
+        'start' => 'vt-nivo/start_nivo',
     ),
     'blocks' => array(
         array('template' => 'layout/header.tpl', 'block' => 'promoslider', 'file' => 'promoslider.tpl'),
