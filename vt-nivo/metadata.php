@@ -16,7 +16,7 @@ $aModule = array(
     'title' => '<strong style="color:#c700bb;border: 1px solid #c700bb;padding: 0 2px;background:white;">VT</strong> Nivo Slider',
     'description' => 'Nivo Slider implementation for Azure Template<hr/><h2>Installation:</h2>copy this code into tpl/layout/header.tpl:<p><input type="text" size="64" value="[{block name=&quot;promoslider&quot;}][{/block}]"/></p>',
     'thumbnail' => 'oxid-vt.jpg',
-    'version' => '1.0',
+    'version' => '4.6',
     'author' => 'Marat Bedoev',
     'email' => 'oxid@marat-bedoev.net',
     'url' => 'https://github.com/vanilla-thunder/',
