@@ -1,11 +1,17 @@
-Installation:
+vt Nivo Slider (module for OXID eSales)
 ====================
-put the vt-nivo folder into the modules directory in your shop.
+The Nivo Slider is world renowned as the most beautiful and easy to use slider on the market. Completely free and totally open source, there literally is no better way to make your website look totally stunning. If you don't believe us, check out the list of features below and you soon will.
+
+
+INSTALLATION
+------------
+copy the content of the "copy_this" folder into the shop root directory
+if you are uploading files via ftp, switch to the binary transfer mode
 You will find the code snippet in the module description in OXID backend
 
 
-vt Nivo Slider (module for OXID eSales)
-====================
+LICENSE AGREEMENT 
+------------
 Copyright (C) 2012  Marat Bedoev
 
 This program is free software;
@@ -18,7 +24,7 @@ You should have received a copy of the GNU General Public License along with thi
  
  
 Nivo Slider
-====================
+------------
 Copyright (c) 2010-2012 Dev7studios
 
 Permission is hereby granted, free of charge, to any person
