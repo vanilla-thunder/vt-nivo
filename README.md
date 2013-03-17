@@ -49,3 +49,4 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 See http://nivo.dev7studios.com for more info.
+<img src="https://ma-be.info/piwik/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" />
