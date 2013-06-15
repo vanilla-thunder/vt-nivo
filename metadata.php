@@ -15,9 +15,9 @@
 	$aModule = array(
 		'id'          => 'vt-nivo',
 		'title'       => '<strong style="color:#c700bb;border: 1px solid #c700bb;padding: 0 2px;background:white;">VT</strong> Nivo Slider',
-		'description' => 'Nivo Slider implementation for Azure Template<hr/><h2>Installation:</h2>copy this code into tpl/layout/header.tpl:<p><input type="text" size="64" value="[{block name=&quot;promoslider&quot;}][{/block}]"/></p>',
+		'description' => 'Nivo Slider implementation for Azure Template<hr/><h2>Installation:</h2>copy this code into tpl/layout/header.tpl:<p><input type="text" size="64" value="[{block name=&quot;vt_nivo&quot;}][{/block}]"/></p>',
 		'thumbnail'   => 'oxid-vt.jpg',
-		'version'     => '1.1 from 2013-06-11 / newest version: <img src="https://raw.github.com/vanilla-thunder/vt-devutils/module/version.jpg" /><br/><a style="display: inline-block; padding: 1px 15px; background: #f0f0f0; border: 1px solid gray" href="https://github.com/vanilla-thunder/vt-nivo/" target="_blank">info</a> <a style="display: inline-block; padding: 1px 15px; background: #f0f0f0; border: 1px solid gray" href="https://github.com/vanilla-thunder/vt-nivo/archive/master.zip">download</a>',
+		'version'     => '2.0 from 2013-06-15 / newest version: <img src="https://raw.github.com/vanilla-thunder/vt-devutils/module/version.jpg" /><br/><a style="display: inline-block; padding: 1px 15px; background: #f0f0f0; border: 1px solid gray" href="https://github.com/vanilla-thunder/vt-nivo/" target="_blank">info</a> <a style="display: inline-block; padding: 1px 15px; background: #f0f0f0; border: 1px solid gray" href="https://github.com/vanilla-thunder/vt-nivo/archive/master.zip">download</a>',
 		'author'      => 'Marat Bedoev',
 		'email'       => 'oxid@marat.ws',
 		'url'         => 'http://marat.ws',
@@ -26,7 +26,6 @@
 		),
 		'blocks'      => array(
 			array('template' => 'layout/header.tpl', 'block' => 'vt_nivo', 'file' => '/views/blocks/promoslider.tpl'),
-			array('template' => 'layout/header.tpl', 'block' => 'promoslider', 'file' => '/views/blocks/promoslider.tpl'),
 		),
 		'settings'    => array(
 			array('group' => 'nivoMain', 'name' => 'nivojQuery',           type => 'bool',   'value' => true,   'position' => 0),
