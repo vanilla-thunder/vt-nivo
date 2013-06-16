@@ -14,8 +14,26 @@
 	$sLangName = 'Deutsch';
 	$aLang = array(
 		'charset'                                   => 'UTF-8',
-		'SHOP_MODULE_GROUP_nivoMain'                => '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff3600; }.groupExp dt input.txt { width: 400px !important} .groupExp dl { display: block !important; } input.confinput {position: fixed; top: 20px; right: 70px; background: #008B2D; padding: 5px 20px; color: white; border: 1px solid black; cursor:pointer; font-size: 125%; } input.confinput:hover {outline: 3px solid #ff3600;}</style>Nivo Slider Einstellungen',
+		'SHOP_MODULE_GROUP_nivoModuleSettings'      => '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff3600; }.groupExp dt input.txt { width: 400px !important} .groupExp dl { display: block !important; } input.confinput {position: fixed; top: 20px; right: 70px; background: #008B2D; padding: 5px 20px; color: white; border: 1px solid black; cursor:pointer; font-size: 125%; } input.confinput:hover {outline: 3px solid #ff3600;}</style>Slider auf folgenden Seiten anzeigen:',
 
+		'SHOP_MODULE_nivo_start'                    => 'Startseite',
+		'SHOP_MODULE_nivo_alist'                    => 'Kategorie',
+		'SHOP_MODULE_nivo_basket'                   => 'Warenkorb <small>(<a href="../index.php?cl=basket" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_clearcookies'             => 'Cookies <small>(<a href="../index.php?cl=clearcookies" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_contact'                  => 'Kontaktseite <small>(<a href="../index.php?cl=contact" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_content'                  => 'Content-Seiten (Impressum) <small>(<a href="../impressum/" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_details'                  => 'Produktseite',
+		'SHOP_MODULE_nivo_forgotpwd'                => 'Passwort Vergessen <small>(<a href="../index.php?cl=forgotpwd" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_guestbook'                => 'Gästebuch <small>(<a href="../index.php?cl=guestbook" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_links'                    => 'Links <small>(<a href="../index.php?cl=links" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_manufacturerlist'         => 'Herstellerliste <small>(<a href="../index.php?cl=manufacturerlist&mnid=root" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_news'                     => 'Neuigkeiten <small>(<a href="../index.php?cl=news" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_newsletter'               => 'Newsletter <small>(<a href="../index.php?cl=newsletter" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_search'                   => 'Suche <small>(<a href="../index.php?cl=search" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_tags'                     => 'Tags <small>(<a href="../index.php?cl=tags" target="_blank">zeigen</a>)</small>',
+		'SHOP_MODULE_nivo_vendorlist'               => 'Vendorlist <small>(<a href="../index.php?cl=vendorlist" target="_blank">zeigen</a>)</small>',
+
+		'SHOP_MODULE_GROUP_nivoMain'                => 'Nivo Slider Einstellungen </a><a target="_blank" href="http://dev7studios.com/nivo-slider/#/documentation"><small>( ? )</small>',
 		'SHOP_MODULE_nivojQuery'                    => 'jQuery 1.9 extra einbinden,<br/><em>Nivo Slider erforder eine jQuery Version 1.7+, das standard Azure Template verfügt über die Version 1.5<br/>
 																		Haben Sie das Azure Template oder Child Template von Azure im EInsatz, müssen sie diese Option aktivieren.<br/>Bei einem komplett eigenen Template müssen Sie zuerst die Version von jQuery prüfen.</em>',
 		'SHOP_MODULE_nivoTheme'                     => 'Theme',
@@ -53,7 +71,7 @@
 		'SHOP_MODULE_nivoControlNav'                => 'Slidr-Navigation anzeigen',
 		'SHOP_MODULE_nivoControlNavThumbs'          => 'Vorschaubilder-navigation anzeigen',
 		'SHOP_MODULE_nivoPauseOnHover'              => 'Pause beim MouseOver',
-		'SHOP_MODULE_nivoManualAdvance'             => 'ich habe absolut keine Ahnung was das ist, willst Du es dennoch haben?',
+		'SHOP_MODULE_nivoManualAdvance'             => 'nur auf manuelle Bedienung reagieren',
 
 		'SHOP_MODULE_nivoPrevText'                  => 'Text für den Link zum nächsten Slide',
 		'SHOP_MODULE_nivoNextText'                  => 'Text für den Link zum vorherigen Slide',

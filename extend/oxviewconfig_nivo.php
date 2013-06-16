@@ -55,16 +55,53 @@
 			$aStyles[] = $this->getModuleUrl('vt-nivo', 'nivo-slider/themes/' . $theme . '/' . $theme . '.css');
 			$cfg->setGlobalParameter('styles' . $sSufix, $aStyles);
 
+			$beforeChange = '';
+			foreach($cfg->getConfigParam("nivoBeforeChange") as $row)   {  $beforeChange .= $row;	}
+
+			$afterChange = '';
+			foreach($cfg->getConfigParam("nivoAfterChange") as $row)   {  $afterChange .= $row;	}
+
+			$slideshowEnd = '';
+			foreach($cfg->getConfigParam("nivoSlideshowEnd") as $row)   {  $slideshowEnd .= $row;	}
+
+			$lastSlide = '';
+			foreach($cfg->getConfigParam("nivoLastSlide") as $row)   {  $lastSlide .= $row;	}
+
+			$afterLoad = '';
+			foreach($cfg->getConfigParam("nivoAfterLoad") as $row)   {  $afterLoad .= $row;	}
+
+			$sliderconfig = '{
+			effect: "'.$cfg->getConfigParam("nivoEffect").'",
+			slices: '.$cfg->getConfigParam("nivoSlices").', // For slice animations
+			boxCols: '.$cfg->getConfigParam("nivoBoxCols").', // For box animations
+         boxRows: '.$cfg->getConfigParam("nivoBoxRows").', // For box animations
+         animSpeed: '.$cfg->getConfigParam("nivoAnimSpeec").', // Slide transition speed
+         pauseTime: '.$cfg->getConfigParam("nivePauseTime").', // How long each slide will show
+         startSlide: '.$cfg->getConfigParam("nivoStartSlide").', // Set starting Slide (0 index)
+         directionNav: '.($cfg->getConfigParam("nivoDirectionNav") ? 'true' : 'false').', // Next & Prev navigation
+         controlNav: '.($cfg->getConfigParam("nivoControlNav") ? 'true' : 'false').', // 1,2,3... navigation
+         controlNavThumbs: '.($cfg->getConfigParam("nivoControlNavThumbs") ? 'true' : 'false').', // Use thumbnails for Control Nav
+         pauseOnHover: '.($cfg->getConfigParam("nivoPauseOnHover") ? 'true' : 'false').', // Stop animation while hovering
+         manualAdvance: '.($cfg->getConfigParam("nivoManualAdvance") ? 'true' : 'false').', // Force manual transitions
+         prevText: "'.$cfg->getConfigParam("nivoPrevText").'", // Prev directionNav text
+         nextText: "'.$cfg->getConfigParam("nivoNextText").'", // Next directionNav text
+         randomStart: '.($cfg->getConfigParam("nivoRandomStart") ? 'true' : 'false').', // Start on a random slide
+         beforeChange: function(){'.$beforeChange.'}, // Triggers before a slide transition
+         afterChange: function(){'.$afterChange.'}, // Triggers after a slide transition
+         slideshowEnd: function(){'.$slideshowEnd.'}, // Triggers after all slides have been shown
+         lastSlide: function(){'.$lastSlide.'}, // Triggers when last slide is shown
+         afterLoad: function(){'.$afterLoad.'} // Triggers when slider has loaded
+			}';
+
 
 			if ($cfg->getConfigParam("nivojQuery")) // inline include + jquery noConflict()
 			{
 				$content = '<script type="text/javascript" src="' . $this->getModuleUrl('vt-nivo', 'out/jquery-1.10.1.min.js') . '"></script>'; // jquery
 				$content .= '<script type="text/javascript" src="' . $this->getModuleUrl('vt-nivo', 'nivo-slider/jquery.nivo.slider.pack.js') . '"></script>'; // nivo slider
-				$content .= '<script type="text/javascript"> var j = jQuery.noConflict(); j(window).ready(function(){ j("' . $selector . '").nivoSlider(); }); </script>';
+				$content .= '<script type="text/javascript"> var j = jQuery.noConflict(); j(window).ready(function(){ j("' . $selector . '").nivoSlider('.$sliderconfig.'); }); </script>';
 
 				return $content;
-			}
-			else
+			} else
 			{
 				$aInclude = (array)$cfg->getGlobalParameter('includes' . $sSufix);
 				$aInclude[10][] = $this->getModuleUrl('vt-nivo', 'nivo-slider/jquery.nivo.slider.pack.js'); //include nivo
@@ -72,7 +109,7 @@
 
 				// slider init script
 				$aScript = (array)$cfg->getGlobalParameter('scripts' . $sSufix);
-				$aScript[] = "$('" . $selector . "').nivoSlider();";
+				$aScript[] = "$('" . $selector . "').nivoSlider('.$sliderconfig.');";
 				$cfg->setGlobalParameter('scripts' . $sSufix, $aScript);
 			}
 

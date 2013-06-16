@@ -3,7 +3,7 @@
 
 [{if $oBanners|@count}]
 
-	<div class="slider-wrapper theme-[{$oViewConf->getNivoTheme()}]">
+	<div class="slider-wrapper theme-[{$oViewConf->getNivoTheme()}]" style="margin: 0 0 10px 0">
 		<div id="slider" class="nivoSlider">
 			[{foreach from=$oBanners item=oBanner }]
 				[{assign var=oArticle value=$oBanner->getBannerArticle() }]
@@ -11,11 +11,11 @@
 				[{assign var=sBannerPictureUrl value=$oBanner->getBannerPictureUrl() }]
 
 
-				[{if $sBannerLink }]<a href="[{ $sBannerLink }]">[{/if}]
+				[{if $sBannerLink && $sBannerPictureUrl }]<a href="[{ $sBannerLink }]">[{/if}]
 				[{if $sBannerPictureUrl}]
-					<img src="[{ $sBannerPictureUrl }]" height="220" width="940" [{if $oArticle }]title="[{ $oArticle->oxarticles__oxtitle->value }] [{ $oArticle->getFPrice() }] [{ $currency->sign}]"[{/if}]>
+					<img src="[{ $sBannerPictureUrl }]" height="220" width="940" data-thumb="[{ $sBannerPictureUrl }]" [{if $oArticle }]title="[{ $oArticle->oxarticles__oxtitle->value }] [{ $oArticle->getFPrice() }] [{ $currency->sign}]"[{/if}]>
 				[{/if}]
-				[{if $sBannerLink }]</a>[{/if}]
+				[{if $sBannerLink && $sBannerPictureUrl }]</a>[{/if}]
 
 			[{/foreach}]
 		</div>
