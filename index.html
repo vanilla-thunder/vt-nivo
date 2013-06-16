@@ -3,73 +3,153 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Vt-nivo by vanilla-thunder</title>
+
+    <title>[vt] Nivo Slider by vanilla-thunder</title>
   </head>
 
   <body>
-    <div id="container">
+    <header>
       <div class="inner">
+        <h1>[vt] Nivo Slider</h1>
+        <h2>jQuery Nivo Slider for OXID eShop 4.7+</h2>
+        <a href="https://github.com/vanilla-thunder/vt-nivo" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-        <header>
-          <h1>Vt-nivo</h1>
-          <h2>jQuery Nivo Slider for OXID eSales</h2>
-        </header>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="what-you-get" class="anchor" href="#what-you-get"><span class="octicon octicon-link"></span></a>what you get:</h1>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/vanilla-thunder/vt-nivo/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/vanilla-thunder/vt-nivo/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/vanilla-thunder/vt-nivo" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+<ul>
+<li>this module will replace the default OXID's slider with the Nivo Slider ( <a href="http://dev7studios.com/nivo-slider/">info, demo</a> )</li>
+<li>effects, theme and all other settings of nivo slider can be configured in OXID backend</li>
+<li>no programmer skills are required</li>
+<li>
+<strong>the slider will be available on all pages</strong> instead the start page only, this can be configured in OXID backend</li>
+</ul><h1>
+<a name="what-you-need" class="anchor" href="#what-you-need"><span class="octicon octicon-link"></span></a>what you need:</h1>
 
-        <hr>
+<ul>
+<li>this module works with OXID eShop Community and Professional Editions 4.7.x</li>
+<li>it should also work with Enterprise Edition 5, but i could not test it yet</li>
+<li>you need access to the template files to insert the required code</li>
+</ul><h1>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>installation:</h1>
 
-        <section id="main_content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<h2>
+<a name="getting-the-module" class="anchor" href="#getting-the-module"><span class="octicon octicon-link"></span></a>getting the module</h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<ul>
+<li>download the zip</li>
+<li>extract it</li>
+<li>copy the contents of the "copy_this" folder into the shop root directory</li>
+<li><p>if you use a ftp client, make sure you set it to use binaty mode to transfer files</p></li>
+<li>
+<p>if you are familar with git and shell you can checkout the module branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<pre><code>$ cd *your_shop_root*/modules/
+$ git clone -b module git://github.com/vanilla-thunder/vt-nivo.git
+</code></pre>
+</li>
+</ul><h2>
+<a name="template-changes" class="anchor" href="#template-changes"><span class="octicon octicon-link"></span></a>template changes</h2>
+
+<ul>
+<li>go to the directory application/views/*active template*/tpl/layout/</li>
+<li>open file <strong>header.tpl</strong> and scroll down, you will see:</li>
+</ul><pre><code>[{if $oView-&gt;getClassName()=='start' &amp;&amp; $oView-&gt;getBanners()|@count &gt; 0 }]  
+    &lt;div class="oxSlider"&gt;  
+        [{include file="widget/promoslider.tpl" }]  
+    &lt;/div&gt;  
+[{/if}]  
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<ul>
+<li>place the new code around it:</li>
+</ul><pre><code>[{block name="vt_nivo"}]  
+[{if $oView-&gt;getClassName()=='start' &amp;&amp; $oView-&gt;getBanners()|@count &gt; 0 }]  
+    &lt;div class="oxSlider"&gt;  
+        [{include file="widget/promoslider.tpl" }]  
+    &lt;/div&gt;  
+[{/if}]  
+[{/block}]  
+</code></pre>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<ul>
+<li>save and exit</li>
+<li>clear the tmp/smarty/ folder</li>
+</ul><h2>
+<a name="activation-and-configuration" class="anchor" href="#activation-and-configuration"><span class="octicon octicon-link"></span></a>activation and configuration</h2>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<ul>
+<li>log into the OXID backend and got to extensions-&gt;modules</li>
+<li>activate "vt Nivo"</li>
+<li>switch to the settings tab and configure the slider</li>
+<li>the first part is about the sites, where you want to display the slider</li>
+<li>the second part is about the slider settings, you can read the manual from the nivo slider website</li>
+<li>there is one important setting: the first one about including jQuery. you can leave it blank and test the slider. if it doesn't work proper enable this setting and test again.</li>
+</ul><h1>
+<a name="got-problems-or-questions" class="anchor" href="#got-problems-or-questions"><span class="octicon octicon-link"></span></a>got problems or questions?</h1>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>please use one of this threads in OXID Community Forum:</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>international (english):<br>
+german:<br>
+russian:  </p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<h1>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>license</h1>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h2>
+<a name="vt-nivo-module-for-oxid-eshop-47" class="anchor" href="#vt-nivo-module-for-oxid-eshop-47"><span class="octicon octicon-link"></span></a>vt-nivo Module for OXID eShop 4.7</h2>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p>Copyright (c) 2012-2013 Marat Bedoev</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a></p>
+
+<h2>
+<a name="nivo-slider" class="anchor" href="#nivo-slider"><span class="octicon octicon-link"></span></a>Nivo Slider</h2>
+
+<p>Copyright (c) 2010-2012 Dev7studios</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
         </section>
 
-        <footer>
-          Vt-nivo is maintained by <a href="https://github.com/vanilla-thunder">vanilla-thunder</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+        <aside id="sidebar">
+          <a href="https://github.com/vanilla-thunder/vt-nivo/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/vanilla-thunder/vt-nivo/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-                  <script type="text/javascript">
+          <p class="repo-owner"><a href="https://github.com/vanilla-thunder/vt-nivo"></a> is maintained by <a href="https://github.com/vanilla-thunder">vanilla-thunder</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -80,7 +160,5 @@ $ git checkout gh-pages
             } catch(err) {}
           </script>
 
-      </div>
-    </div>
   </body>
 </html>
