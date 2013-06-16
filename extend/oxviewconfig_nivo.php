@@ -24,10 +24,14 @@
 		 */
 		public function getBanners()
 		{
+			$cfg = oxRegistry::getConfig();
+			$param = "nivo_".$this->getActiveClassName();
+			if(!$cfg->getConfigParam($param))
+				return NULL;
 
 			$oBannerList = NULL;
 
-			if ($this->getConfig()->getConfigParam('bl_perfLoadAktion'))
+			if ($cfg->getConfigParam('bl_perfLoadAktion'))
 			{
 				$oBannerList = oxNew('oxActionList');
 				$oBannerList->loadBanners();
