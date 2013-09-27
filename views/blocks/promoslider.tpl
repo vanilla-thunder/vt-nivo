@@ -9,11 +9,14 @@
 				[{assign var=oArticle value=$oBanner->getBannerArticle() }]
 				[{assign var=sBannerLink value=$oBanner->getBannerLink() }]
 				[{assign var=sBannerPictureUrl value=$oBanner->getBannerPictureUrl() }]
+                [{assign var=oBannerCaption value=$oBanner->getCaptionContent()}]
 
 
 				[{if $sBannerLink && $sBannerPictureUrl }]<a href="[{ $sBannerLink }]">[{/if}]
 				[{if $sBannerPictureUrl}]
-					<img src="[{ $sBannerPictureUrl }]" height="220" width="940" data-thumb="[{ $sBannerPictureUrl }]" [{if $oArticle }]title="[{ $oArticle->oxarticles__oxtitle->value }] [{ $oArticle->getFPrice() }] [{ $currency->sign}]"[{/if}]>
+					<img src="[{ $sBannerPictureUrl }]" [{* height="220" width="940" *}] data-thumb="[{ $sBannerPictureUrl }]"
+                            [{if $oArticle }]title="[{ $oArticle->oxarticles__oxtitle->value }] [{ $oArticle->getFPrice() }] [{ $currency->sign}]"
+                            [{elseif $oBannerCaption}]title="[{$oBannerCaption->oxcontents__oxcontent->value|strip_tags}]"[{/if}] />
 				[{/if}]
 				[{if $sBannerLink && $sBannerPictureUrl }]</a>[{/if}]
 
