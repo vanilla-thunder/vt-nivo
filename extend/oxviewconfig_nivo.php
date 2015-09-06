@@ -1,80 +1,80 @@
 <?php
 
+/*
+ *  - Nivo Slider Integration for OXID eShop
+ * Copyright (C) 2015  
+ * info:  m@marat.ws
+ *
+ * GNU GENERAL PUBLIC LICENSE  
+ *
+ * This program is free software;
+ * you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ *  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+ */
+ 
+class oxviewconfig_nivo extends oxviewconfig_nivo_parent
+{
+
 	/**
-	 * vt Nivo Slider
-	 * Copyright (C) 2012-2013  Marat Bedoev
+	 * Returns active banner list
 	 *
-	 * This program is free software;
-	 * you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
-	 * either version 3 of the License, or (at your option) any later version.
-	 *
-	 * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-	 * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-	 * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+	 * @return objects
 	 */
-
-	class oxviewconfig_nivo extends oxviewconfig_nivo_parent
+	public function getBanners()
 	{
-
-
-		/**
-		 * Returns active banner list
-		 *
-		 * @return objects
-		 */
-		public function getBanners()
+		$cfg = oxRegistry::getConfig();
+		$param = "nivo_".$this->getActiveClassName();
+		if(!$cfg->getConfigParam($param)) return NULL;
+		
+		$oBannerList = NULL;
+		if ($cfg->getConfigParam('bl_perfLoadAktion'))
 		{
-			$cfg = oxRegistry::getConfig();
-			$param = "nivo_".$this->getActiveClassName();
-			if(!$cfg->getConfigParam($param))
-				return NULL;
-
-			$oBannerList = NULL;
-
-			if ($cfg->getConfigParam('bl_perfLoadAktion'))
-			{
-				$oBannerList = oxNew('oxActionList');
-				$oBannerList->loadBanners();
-			}
-
-			return $oBannerList;
+			$oBannerList = oxNew('oxActionList');
+			$oBannerList->loadBanners();
 		}
 
-		public function getNivoTheme()
-		{
-			return oxRegistry::getConfig()->getConfigParam("nivoTheme");
-		}
+		return $oBannerList;
+	}
 
-		public function nivoSlider($selector)
-		{
-			$cfg = oxRegistry::getConfig();
+	public function getNivoTheme()
+	{
+		return oxRegistry::getConfig()->getConfigParam("nivoTheme");
+	}
 
-			/* include css */
-			$smarty = oxRegistry::get("oxUtilsView")->getSmarty();
-			$sSufix = ($smarty->_tpl_vars["__oxid_include_dynamic"]) ? '_dynamic' : '';
+	public function nivoSlider($selector)
+	{
+		$cfg = oxRegistry::getConfig();
 
-			$theme = $cfg->getConfigParam("nivoTheme");
-			$aStyles = (array)$cfg->getGlobalParameter('styles' . $sSufix);
-			$aStyles[] = $this->getModuleUrl('vt-nivo', 'nivo-slider/nivo-slider.css');
-			$aStyles[] = $this->getModuleUrl('vt-nivo', 'nivo-slider/themes/' . $theme . '/' . $theme . '.css');
-			$cfg->setGlobalParameter('styles' . $sSufix, $aStyles);
+		/* include css */
+		$smarty = oxRegistry::get("oxUtilsView")->getSmarty();
+		$sSufix = ($smarty->_tpl_vars["__oxid_include_dynamic"]) ? '_dynamic' : '';
 
-			$beforeChange = '';
-			foreach($cfg->getConfigParam("nivoBeforeChange") as $row)   {  $beforeChange .= $row;	}
+		$theme = $cfg->getConfigParam("nivoTheme");
+		$aStyles = (array)$cfg->getGlobalParameter('styles' . $sSufix);
+		$aStyles[] = $this->getModuleUrl('vt-nivo', 'nivo-slider/nivo-slider.css');
+		$aStyles[] = $this->getModuleUrl('vt-nivo', 'nivo-slider/themes/' . $theme . '/' . $theme . '.css');
+		$cfg->setGlobalParameter('styles' . $sSufix, $aStyles);
 
-			$afterChange = '';
-			foreach($cfg->getConfigParam("nivoAfterChange") as $row)   {  $afterChange .= $row;	}
+		$beforeChange = '';
+		foreach($cfg->getConfigParam("nivoBeforeChange") as $row)   {  $beforeChange .= $row;	}
 
-			$slideshowEnd = '';
-			foreach($cfg->getConfigParam("nivoSlideshowEnd") as $row)   {  $slideshowEnd .= $row;	}
-
-			$lastSlide = '';
-			foreach($cfg->getConfigParam("nivoLastSlide") as $row)   {  $lastSlide .= $row;	}
-
-			$afterLoad = '';
-			foreach($cfg->getConfigParam("nivoAfterLoad") as $row)   {  $afterLoad .= $row;	}
-
-			$sliderconfig = '{
+		$afterChange = '';
+		foreach($cfg->getConfigParam("nivoAfterChange") as $row)   {  $afterChange .= $row;	}
+			
+		$slideshowEnd = '';
+		foreach($cfg->getConfigParam("nivoSlideshowEnd") as $row)   {  $slideshowEnd .= $row;	}
+			
+		$lastSlide = '';
+		foreach($cfg->getConfigParam("nivoLastSlide") as $row)   {  $lastSlide .= $row;	}
+			
+		$afterLoad = '';
+		foreach($cfg->getConfigParam("nivoAfterLoad") as $row)   {  $afterLoad .= $row;	}
+			
+		$sliderconfig = '{
 			effect: "'.$cfg->getConfigParam("nivoEffect").'",
 			slices: '.$cfg->getConfigParam("nivoSlices").', // For slice animations
 			boxCols: '.$cfg->getConfigParam("nivoBoxCols").', // For box animations
@@ -95,29 +95,26 @@
             slideshowEnd: function(){'.$slideshowEnd.'}, // Triggers after all slides have been shown
             lastSlide: function(){'.$lastSlide.'}, // Triggers when last slide is shown
             afterLoad: function(){'.$afterLoad.'} // Triggers when slider has loaded
-			}';
+		}';
 
+		// inline include + jquery noConflict()
+		if ($cfg->getConfigParam("nivojQuery")) 
+		{
+			$content = '<script type="text/javascript" src="' . $this->getModuleUrl('vt-nivo', 'out/jquery-1.11.3.min.js') . '"></script>'; // jquery
+			$content .= '<script type="text/javascript" src="' . $this->getModuleUrl('vt-nivo', 'nivo-slider/jquery.nivo.slider.pack.js') . '"></script>'; // nivo slider
+			$content .= '<script type="text/javascript"> var j = jQuery.noConflict(); j(window).ready(function(){ j("' . $selector . '").nivoSlider('.$sliderconfig.'); }); </script>';
+			return $content;
+		}
+		else
+		{
+			$aInclude = (array)$cfg->getGlobalParameter('includes' . $sSufix);
+			$aInclude[10][] = $this->getModuleUrl('vt-nivo', 'nivo-slider/jquery.nivo.slider.pack.js'); //include nivo
+			$cfg->setGlobalParameter('includes' . $sSufix, $aInclude);
 
-			if ($cfg->getConfigParam("nivojQuery")) // inline include + jquery noConflict()
-			{
-				$content = '<script type="text/javascript" src="' . $this->getModuleUrl('vt-nivo', 'out/jquery-1.10.1.min.js') . '"></script>'; // jquery
-				$content .= '<script type="text/javascript" src="' . $this->getModuleUrl('vt-nivo', 'nivo-slider/jquery.nivo.slider.pack.js') . '"></script>'; // nivo slider
-				$content .= '<script type="text/javascript"> var j = jQuery.noConflict(); j(window).ready(function(){ j("' . $selector . '").nivoSlider('.$sliderconfig.'); }); </script>';
-
-				return $content;
-			}
-            else
-			{
-				$aInclude = (array)$cfg->getGlobalParameter('includes' . $sSufix);
-				$aInclude[10][] = $this->getModuleUrl('vt-nivo', 'nivo-slider/jquery.nivo.slider.pack.js'); //include nivo
-				$cfg->setGlobalParameter('includes' . $sSufix, $aInclude);
-
-				// slider init script
-				$aScript = (array)$cfg->getGlobalParameter('scripts' . $sSufix);
-				$aScript[] = "$('" . $selector . "').nivoSlider('.$sliderconfig.');";
-				$cfg->setGlobalParameter('scripts' . $sSufix, $aScript);
-			}
-
-
+			// slider init script
+			$aScript = (array)$cfg->getGlobalParameter('scripts' . $sSufix);
+			$aScript[] = "$('" . $selector . "').nivoSlider(".$sliderconfig.");";
+			$cfg->setGlobalParameter('scripts' . $sSufix, $aScript);
 		}
 	}
+}

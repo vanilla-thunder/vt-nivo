@@ -1,20 +1,25 @@
 <?php
-	/**
-	 * vt Nivo Slider
-	 * Copyright (C) 2012-2013  Marat Bedoev
-	 *
-	 * This program is free software;
-	 * you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
-	 * either version 3 of the License, or (at your option) any later version.
-	 *
-	 * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-	 * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-	 * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
-	 */
-	$sLangName = 'Deutsch';
-	$aLang = array(
-		'charset'                                   => 'UTF-8',
-		'SHOP_MODULE_GROUP_nivoModuleSettings'      => '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff3600; }.groupExp dt input.txt { width: 400px !important} .groupExp dl { display: block !important; } input.confinput {position: fixed; top: 20px; right: 70px; background: #008B2D; padding: 5px 20px; color: white; border: 1px solid black; cursor:pointer; font-size: 125%; } input.confinput:hover {outline: 3px solid #ff3600;}</style>Slider auf folgenden Seiten anzeigen:',
+
+/*
+ *  - Nivo Slider Integration for OXID eShop
+ * Copyright (C) 2015  
+ * info:  m@marat.ws
+ *
+ * GNU GENERAL PUBLIC LICENSE  
+ *
+ * This program is free software;
+ * you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ *  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+ */
+ 
+$sLangName = 'Deutsch';
+$aLang = array(
+	'charset'                                   => 'UTF-8',
+	'SHOP_MODULE_GROUP_nivoModuleSettings'      => '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff3600; }.groupExp dt input.txt { width: 400px !important} .groupExp dl { display: block !important; } input.confinput {position: fixed; top: 20px; right: 70px; background: #008B2D; padding: 5px 20px; color: white; border: 1px solid black; cursor:pointer; font-size: 125%; } input.confinput:hover {outline: 3px solid #ff3600;}</style>Slider auf folgenden Seiten anzeigen:',
 
 		'SHOP_MODULE_nivo_start'                    => 'Startseite',
 		'SHOP_MODULE_nivo_alist'                    => 'Kategorie',
@@ -71,7 +76,7 @@
 		'SHOP_MODULE_nivoControlNav'                => 'Slidr-Navigation anzeigen',
 		'SHOP_MODULE_nivoControlNavThumbs'          => 'Vorschaubilder-navigation anzeigen',
 		'SHOP_MODULE_nivoPauseOnHover'              => 'Pause beim MouseOver',
-		'SHOP_MODULE_nivoManualAdvance'             => 'nur auf manuelle Bedienung reagieren',
+		'SHOP_MODULE_nivoManualAdvance'             => 'ich habe absolut keine Ahnung was das ist, willst Du es dennoch haben?',
 
 		'SHOP_MODULE_nivoPrevText'                  => 'Text für den Link zum nächsten Slide',
 		'SHOP_MODULE_nivoNextText'                  => 'Text für den Link zum vorherigen Slide',
