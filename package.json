@@ -1,0 +1,26 @@
+{
+  "name": "vt-nivo-dev",
+  "version": "1.5.0",
+  "description": "Nivo Slider integration for OXID eShop",
+  "author": "Marat Bedoev <m@marat.ws>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vanilla-thunder/vt-nivo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vanilla-thunder/vt-nivo/issues"
+  },
+  "keywords": [
+    "oxid",
+    "eshop",
+    "nivo slider",
+    "slider"
+  ],
+  "dependencies": {
+    "adm-zip": "*",
+    "cheerio": "*",
+    "replace": "*",
+    "request": "*"
+  }
+}
