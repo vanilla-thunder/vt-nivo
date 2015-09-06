@@ -15,7 +15,10 @@ var shell = function (command) {
 
 
 var version = process.argv[2];
-if (!version) console.log("welche Version?"); process.exit(9);
+if (!version) {
+    console.log("welche Version?");
+    process.exit(9);
+}
 
 // cleanup
 shell("rm -rf _module/extend");
