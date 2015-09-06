@@ -19,8 +19,8 @@
 $sLangName  = 'English';
 $aLang = array(
 	'charset' => 'UTF-8',
-	'nivo_description' => '###_MODULE_### 4.7 - 4.9<br/>Mehr Info zum Nivo Sider gibts hier: <a href="https://github.com/gilbitron/Nivo-Slider" target="_blank">https://github.com/gilbitron/Nivo-Slider</a><hr/>'.
-	                        '<b style="display:inline-block;float:left;line-height:18px;">neuste Version:</b><img src="###_VERSIONURL_###"/><br/>(es besteht keine Bedarf am Update, falls diese Version bereits vorliegt)<hr/>'.
-					 '<h2>Installation:</h2>den folgenden Code in die Datei application/views/*theme*/tpl/layout/header.tpl ODER page.tpl kopieren:<p><input type="text" size="64" value="[{block name=&quot;vt_nivo&quot;}][{/block}]"/></p>',
+	'nivo_description' => '###_MODULE_### 4.7 - 4.9<br/>more info about Nivo Sider: <a href="https://github.com/gilbitron/Nivo-Slider" target="_blank">https://github.com/gilbitron/Nivo-Slider</a><hr/>'.
+	                        '<b style="display:inline-block;float:left;line-height:18px;">newest Version:</b><img src="###_VERSIONURL_###"/><br/>(update only if your module is below this version)<hr/>'.
+					 '<h2>Installation:</h2>copy-paste the following code into application/views/*theme*/tpl/layout/header.tpl OR page.tpl:<p><input type="text" size="64" value="[{block name=&quot;vt_nivo&quot;}][{/block}]"/></p>',
 
 );

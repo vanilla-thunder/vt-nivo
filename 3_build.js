@@ -45,7 +45,7 @@ console.log("     new files copied");
 
 // compile some files
 var module = 'Nivo Slider Integration for OXID eShop',
-    company = '',
+    company = 'vt',
     versionurl = 'https://raw.githubusercontent.com/vanilla-thunder/vt-nivo/master/copy_this/modules/vt-nivo/version.jpg',
     email = 'm@marat.ws',
     year = '2015';

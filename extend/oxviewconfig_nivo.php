@@ -76,25 +76,25 @@ class oxviewconfig_nivo extends oxviewconfig_nivo_parent
 			
 		$sliderconfig = '{
 			effect: "'.$cfg->getConfigParam("nivoEffect").'",
-			slices: '.$cfg->getConfigParam("nivoSlices").', // For slice animations
-			boxCols: '.$cfg->getConfigParam("nivoBoxCols").', // For box animations
-            boxRows: '.$cfg->getConfigParam("nivoBoxRows").', // For box animations
-            animSpeed: '.$cfg->getConfigParam("nivoAnimSpeec").', // Slide transition speed
-            pauseTime: '.$cfg->getConfigParam("nivePauseTime").', // How long each slide will show
-            startSlide: '.$cfg->getConfigParam("nivoStartSlide").', // Set starting Slide (0 index)
-            directionNav: '.($cfg->getConfigParam("nivoDirectionNav") ? 'true' : 'false').', // Next & Prev navigation
-            controlNav: '.($cfg->getConfigParam("nivoControlNav") ? 'true' : 'false').', // 1,2,3... navigation
-            controlNavThumbs: '.($cfg->getConfigParam("nivoControlNavThumbs") ? 'true' : 'false').', // Use thumbnails for Control Nav
-            pauseOnHover: '.($cfg->getConfigParam("nivoPauseOnHover") ? 'true' : 'false').', // Stop animation while hovering
-            manualAdvance: '.($cfg->getConfigParam("nivoManualAdvance") ? 'true' : 'false').', // Force manual transitions
-            prevText: "'.$cfg->getConfigParam("nivoPrevText").'", // Prev directionNav text
-            nextText: "'.$cfg->getConfigParam("nivoNextText").'", // Next directionNav text
-            randomStart: '.($cfg->getConfigParam("nivoRandomStart") ? 'true' : 'false').', // Start on a random slide
-            beforeChange: function(){'.$beforeChange.'}, // Triggers before a slide transition
-            afterChange: function(){'.$afterChange.'}, // Triggers after a slide transition
-            slideshowEnd: function(){'.$slideshowEnd.'}, // Triggers after all slides have been shown
-            lastSlide: function(){'.$lastSlide.'}, // Triggers when last slide is shown
-            afterLoad: function(){'.$afterLoad.'} // Triggers when slider has loaded
+			slices: '.$cfg->getConfigParam("nivoSlices").', /* For slice animations */
+			boxCols: '.$cfg->getConfigParam("nivoBoxCols").', /* For box animations */
+            boxRows: '.$cfg->getConfigParam("nivoBoxRows").', /* For box animations */
+            animSpeed: '.$cfg->getConfigParam("nivoAnimSpeec").', /* Slide transition speed */
+            pauseTime: '.$cfg->getConfigParam("nivePauseTime").', /* How long each slide will show */
+            startSlide: '.$cfg->getConfigParam("nivoStartSlide").', /* Set starting Slide (0 index) */
+            directionNav: '.($cfg->getConfigParam("nivoDirectionNav") ? 'true' : 'false').', /* Next & Prev navigation */
+            controlNav: '.($cfg->getConfigParam("nivoControlNav") ? 'true' : 'false').', /* 1,2,3... navigation */
+            controlNavThumbs: '.($cfg->getConfigParam("nivoControlNavThumbs") ? 'true' : 'false').', /* Use thumbnails for Control Nav */
+            pauseOnHover: '.($cfg->getConfigParam("nivoPauseOnHover") ? 'true' : 'false').', /* Stop animation while hovering */
+            manualAdvance: '.($cfg->getConfigParam("nivoManualAdvance") ? 'true' : 'false').', /* Force manual transitions */
+            prevText: "'.$cfg->getConfigParam("nivoPrevText").'", /* Prev directionNav text */
+            nextText: "'.$cfg->getConfigParam("nivoNextText").'", /* Next directionNav text */
+            randomStart: '.($cfg->getConfigParam("nivoRandomStart") ? 'true' : 'false').', /* Start on a random slide */
+            beforeChange: function(){'.$beforeChange.'}, /* Triggers before a slide transition */
+            afterChange: function(){'.$afterChange.'}, /* Triggers after a slide transition */
+            slideshowEnd: function(){'.$slideshowEnd.'}, /* Triggers after all slides have been shown */
+            lastSlide: function(){'.$lastSlide.'}, /* Triggers when last slide is shown */
+            afterLoad: function(){'.$afterLoad.'} /* Triggers when slider has loaded */
 		}';
 
 		// inline include + jquery noConflict()
