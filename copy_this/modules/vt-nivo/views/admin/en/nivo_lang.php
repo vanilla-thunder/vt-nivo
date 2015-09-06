@@ -1,40 +1,26 @@
 <?php
+
+/*
+ * vt - Nivo Slider Integration for OXID eShop
+ * Copyright (C) 2015  vt
+ * info:  m@marat.ws
+ *
+ * GNU GENERAL PUBLIC LICENSE  
+ *
+ * This program is free software;
+ * you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ *  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+ */
+ 
 $sLangName  = 'English';
 $aLang = array(
 	'charset' => 'UTF-8',
-	'SHOP_MODULE_GROUP_nivoMain' => '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff3600; } .groupExp dt input.txt { width: 200px !important} .groupExp dl { display: block !important; }</style>Nivo Slider settings',
-	'SHOP_MODULE_iNivoAnimSpeed' => 'animation speed',
-	'SHOP_MODULE_iNivoPauseTime' => 'pause time before next slide',	
-	'SHOP_MODULE_sNivoAnimation' => 'animation',
-	'SHOP_MODULE_sNivoAnimation_sliceDown' => 'slice down',
-	'SHOP_MODULE_sNivoAnimation_sliceDownLeft' => 'slice down left',
-	'SHOP_MODULE_sNivoAnimation_sliceUp' => 'slice up',
-	'SHOP_MODULE_sNivoAnimation_sliceUpLeft' => 'slice up left',
-	'SHOP_MODULE_sNivoAnimation_sliceUpDown' => 'slice up down',
-	'SHOP_MODULE_sNivoAnimation_sliceUpDownLeft' => 'slice up down left',
-	'SHOP_MODULE_sNivoAnimation_fold' => 'fold',
-	'SHOP_MODULE_sNivoAnimation_fade' => 'fade',
-	'SHOP_MODULE_sNivoAnimation_random' => 'random',
-	'SHOP_MODULE_sNivoAnimation_slideInRight' => 'slide in right',
-	'SHOP_MODULE_sNivoAnimation_slideInLeft' => 'slide in left',
-	'SHOP_MODULE_sNivoAnimation_boxRandom' => 'box random',
-	'SHOP_MODULE_sNivoAnimation_boxRain' => 'box rain',
-	'SHOP_MODULE_sNivoAnimation_boxRainReverse' => 'box rain reverse',
-	'SHOP_MODULE_sNivoAnimation_boxRainGrow' => 'box rain grow',
-	'SHOP_MODULE_sNivoAnimation_boxRainGrowReverse' => 'box rain grow reverse',
-	'SHOP_MODULE_bNivoDirectionNav' => 'show Prev and Next navigation',
-	'SHOP_MODULE_bNivoDirectionNavHide' => 'show prev and next navigation only on hover',
-	'SHOP_MODULE_bNivoControlNavThumbs' => 'use thumbnails for control navigation',
-	'SHOP_MODULE_sNivoPrevText' => '&quot;prev&quot;-button text',
-	'SHOP_MODULE_sNivoNextText' => '&quot;next&quot;-button text',
-	'SHOP_MODULE_GROUP_nivoStyle' => 'Slider Style',
-	'SHOP_MODULE_sNivoTheme' => 'Slider Theme',
-	'SHOP_MODULE_sNivoTheme_default' => 'default',
-	'SHOP_MODULE_sNivoTheme_nivo' => 'nivo',
-	'SHOP_MODULE_sNivoTheme_orman' => 'orman',
-	'SHOP_MODULE_sNivoTheme_pascal' => 'pascal',
-	'SHOP_MODULE_sNivoTheme_bar' => 'bar',
-	'SHOP_MODULE_sNivoTheme_dark' => 'dark',
-	'SHOP_MODULE_sNivoTheme_light' => 'light',
-	'SHOP_MODULE_sNivoWidth' => 'Slider width ( &quot;%&quot; or &quot;px&quot; e.g. &quot;100%&quot; or &quot;250px&quot;)',
+	'nivo_description' => 'Nivo Slider Integration for OXID eShop 4.7 - 4.9<br/>Mehr Info zum Nivo Sider gibts hier: <a href="https://github.com/gilbitron/Nivo-Slider" target="_blank">https://github.com/gilbitron/Nivo-Slider</a><hr/>'.
+	                        '<b style="display:inline-block;float:left;line-height:18px;">neuste Version:</b><img src="https://raw.githubusercontent.com/vanilla-thunder/vt-nivo/master/copy_this/modules/vt-nivo/version.jpg"/><br/>(es besteht keine Bedarf am Update, falls diese Version bereits vorliegt)<hr/>'.
+					 '<h2>Installation:</h2>den folgenden Code in die Datei application/views/*theme*/tpl/layout/header.tpl ODER page.tpl kopieren:<p><input type="text" size="64" value="[{block name=&quot;vt_nivo&quot;}][{/block}]"/></p>',
+
 );
