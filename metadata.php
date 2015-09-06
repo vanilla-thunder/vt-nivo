@@ -1,8 +1,8 @@
 <?php
 
 /*
- *  - Nivo Slider Integration for OXID eShop
- * Copyright (C) 2015  
+ * vt - Nivo Slider Integration for OXID eShop
+ * Copyright (C) 2015  vt
  * info:  m@marat.ws
  *
  * GNU GENERAL PUBLIC LICENSE  
@@ -23,7 +23,7 @@ $aModule 		  = array(
 	'description' => oxRegistry::getLang()->translateString("nivo_description"),
 	'thumbnail'   => 'oxid-vt.jpg',
     'version'     => '2.1.0',
-    'author'      => 'Marat Bedoev, ',
+    'author'      => 'Marat Bedoev, vt',
     'email'       => 'm@marat.ws',
     'url'         => 'https://github.com/vanilla-thunder/vt-nivo',
 	'extend'      => array(

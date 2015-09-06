@@ -1,8 +1,8 @@
 <?php
 
 /*
- *  - Nivo Slider Integration for OXID eShop
- * Copyright (C) 2015  
+ * vt - Nivo Slider Integration for OXID eShop
+ * Copyright (C) 2015  vt
  * info:  m@marat.ws
  *
  * GNU GENERAL PUBLIC LICENSE  

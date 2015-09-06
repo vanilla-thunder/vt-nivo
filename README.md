@@ -1,4 +1,4 @@
-##  - Nivo Slider Integration for OXID eShop
+## vt - Nivo Slider Integration for OXID eShop
 ### module version 2.1.0
 The Nivo Slider is world renowned as the most beautiful and easy to use slider on the market. Completely free and totally open source, there literally is no better way to make your website look totally stunning. If you don't believe us, check out the list of features below and you soon will.
 
@@ -20,8 +20,8 @@ The Nivo Slider is world renowned as the most beautiful and easy to use slider o
 ## more info here: [http:/marat.ws/vt-nivo/](http:/marat.ws/vt-nivo/)
 
 ### LICENSE AGREEMENT
-    - Nivo Slider Integration for OXID eShop  
-   Copyright (C) 2015    
+   vt - Nivo Slider Integration for OXID eShop  
+   Copyright (C) 2015  vt  
    info:  m@marat.ws  
      
    GNU GENERAL PUBLIC LICENSE  
