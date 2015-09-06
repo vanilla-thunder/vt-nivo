@@ -25,7 +25,7 @@ shell("rm -rf _module/extend");
 shell("rm -rf _module/nivo-slider");
 shell("rm -rf _module/out");
 shell("rm -rf _module/views");
-shell("rm -rf _master/copy_this/modules/bla/bla-tinymce");
+shell("rm -rf _master/copy_this/modules/vt-nivo");
 console.log("");
 console.log("     cleanup finished");
 
