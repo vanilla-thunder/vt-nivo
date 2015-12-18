@@ -38,7 +38,7 @@ $aLang = array(
 		'SHOP_MODULE_nivo_tags'                     => 'tags <small>(<a href="../index.php?cl=tags" target="_blank">view</a>)</small>',
 		'SHOP_MODULE_nivo_vendorlist'               => 'vendor list <small>(<a href="../index.php?cl=vendorlist" target="_blank">view</a>)</small>',
 
-		'SHOP_MODULE_GROUP_nivoMain'                => 'Nivo Slider Settings </a><a target="_blank" href="http://dev7studios.com/nivo-slider/#/documentation"><small>( ? )</small>',
+		'SHOP_MODULE_GROUP_nivoMain'                => 'Nivo Slider Settings </a><a target="_blank" href="http://docs.dev7studios.com/jquery-plugins/nivo-slider"><small>( ? )</small>',
 		'SHOP_MODULE_nivojQuery'                    => 'include own jQuery<br/><em>Nivo Slider requires jQuery Version 1.7+, but 4.7 Azure Template has Version 1.5. Check this option if you have OXID 4.7 oder your jQuery version is below 1.7</em>',
 		'SHOP_MODULE_nivoTheme'                     => 'Theme',
 		'SHOP_MODULE_nivoTheme_bar'                 => 'bar',

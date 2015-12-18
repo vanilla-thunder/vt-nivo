@@ -38,7 +38,7 @@ $aLang = array(
 		'SHOP_MODULE_nivo_tags'                     => 'Tags <small>(<a href="../index.php?cl=tags" target="_blank">zeigen</a>)</small>',
 		'SHOP_MODULE_nivo_vendorlist'               => 'Vendorlist <small>(<a href="../index.php?cl=vendorlist" target="_blank">zeigen</a>)</small>',
 
-		'SHOP_MODULE_GROUP_nivoMain'                => 'Nivo Slider Einstellungen </a><a target="_blank" href="http://dev7studios.com/nivo-slider/#/documentation"><small>( ? )</small>',
+		'SHOP_MODULE_GROUP_nivoMain'                => 'Nivo Slider Einstellungen </a><a target="_blank" href="http://docs.dev7studios.com/jquery-plugins/nivo-slider"><small>( ? )</small>',
 		'SHOP_MODULE_nivojQuery'                    => 'jQuery 1.9 extra einbinden,<br/><em>Nivo Slider erforder eine jQuery Version 1.7+, das standard Azure Template verfügt über die Version 1.5<br/>
 																		Haben Sie das Azure Template oder Child Template von Azure im EInsatz, müssen sie diese Option aktivieren.<br/>Bei einem komplett eigenen Template müssen Sie zuerst die Version von jQuery prüfen.</em>',
 		'SHOP_MODULE_nivoTheme'                     => 'Theme',
